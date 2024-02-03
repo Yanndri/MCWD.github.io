@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p style="margin-top: 20vw;"></p>
+    <input id="prev" placeholder="previous"><br>
+    <input id="curr" placeholder="current"><br>
+    <select>
+        <option value="1/2">&#xBD;</option>
+        <option value="1">1</option>
+        <option value="1 1/2">1 &#xBD;</option>
+        <option value="2">2</option>
+        <option value="3/8">&#x215C;</option>
+        <option value="3/4">&#xBE;</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">6</option>
+        <option value="6">8</option>
+        <option value="10">10</option>
+    </select><br>
+    <button onclick="calc()">submit</button>
+
+    <h1 id="aerial">Consumption: 0</h1>
+
+    <script>
+
+        function calc() {
+            let prev = document.getElementById('prev').value;
+            let curr = document.getElementById('curr').value;
+            let consumption = curr - prev;
+
+            console.log(consumption);
+            document.getElementById('aerial').innerText = `Consumption: ${consumption}`
+        }
+    </script>
+</body>
+</html>
